@@ -1,11 +1,17 @@
+main,
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
 }
 
+input::placeholder {
+  padding-left: 20px;
+  margin-left: 20px;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +19,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
 }
