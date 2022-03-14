@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  flex-direction: row;
+}
+.mainCanvas {
+  margin: 0px 40px 0px 40px;
+  color: white;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navVertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #a6ff00;
+  width: 20%;
+  height: 100vh;
+}
+
+.contentScroll {
+  display: flex;
+  flex-direction: column;
+  height: 81vh;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.contentScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.mainDiv {
+  width: 80%;
+}
+
+.titleText {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+  font-family: "Courier Prime", monospace;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+.mainNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.mainNavContent {
+  color: white;
+  margin: 30px;
+  font-size: 24px;
+}
+
+.navTitles {
+  font-size: 13px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.navTitleTITLE {
+  font-family: "Courier Prime", monospace;
+  font-size: 13px;
+}
+
+.navTitle:hover {
+  font-family: "Courier Prime", monospace;
+}
+
+.song {
+  border-radius: 0px;
+}
