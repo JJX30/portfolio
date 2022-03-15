@@ -98,7 +98,7 @@ function Home() {
               <Link href="/work">contact</Link>
             </div>
           </div>
-          <div className={styles.mainCanvas}></div>
+          <div className={styles.canvas}>fsadf</div>
         </div>
       </div>
     </div>

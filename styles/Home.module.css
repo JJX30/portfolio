@@ -20,7 +20,6 @@
 .contentScroll {
   display: flex;
   flex-direction: column;
-  height: 81vh;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
@@ -75,4 +74,8 @@
 
 .song {
   border-radius: 0px;
+}
+
+.canvas {
+  color: wheat;
 }
