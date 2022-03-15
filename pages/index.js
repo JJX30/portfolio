@@ -3,8 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import BsLightbulbOff from "react-icons/bs";
+import { useRef } from "react";
 
 function Home() {
+  const navVertical = useRef(null);
+
+  function handleColor(color) {
+    navVertical.current.backgroundColor = color;
+  }
+
   return (
     <div>
       <Head>
@@ -13,7 +20,7 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <div className={styles.navVertical}>
+        <div className={styles.navVertical} ref={navVertical}>
           <div>
             <p className={styles.titleText}>
               <Link href="/">Mauricio Del Castillo</Link>
@@ -21,70 +28,90 @@ function Home() {
             <div className={styles.contentScroll}>
               <div className={styles.navTitles}>
                 <p className={styles.navTitleTITLE}>socials</p>
-                <p className={styles.navTitle}>
-                  <a
-                    href="https://twitter.com/hedosntknow"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-link"
-                  >
-                    twitter
-                  </a>
-                </p>
-                <p className={styles.navTitle}>
-                  <a
-                    href="https://www.instagram.com/mdelcas4/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-link"
-                  >
-                    instagram
-                  </a>
-                </p>
-                <p className={styles.navTitle}>
-                  <a
-                    href="https://www.linkedin.com/in/mauricio-del-castillo-264611219/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-link"
-                  >
-                    linkedin
-                  </a>
-                </p>
-                <p className={styles.navTitle}>
-                  <a
-                    href="https://github.com/JJX30"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-link"
-                  >
-                    github
-                  </a>
-                </p>
+                <a
+                  href="https://twitter.com/hedosntknow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <p className={styles.navTitle}>twitter</p>
+                </a>
+                <a
+                  href="https://www.instagram.com/mdelcas4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <p className={styles.navTitle}>instagram</p>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mauricio-del-castillo-264611219/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <p className={styles.navTitle}>linkedin</p>
+                </a>
+                <a
+                  href="https://github.com/JJX30"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <p className={styles.navTitle}>github</p>
+                </a>
               </div>
               <div className={styles.navTitles}>
                 <p className={styles.navTitleTITLE}>blog</p>
-                <p className={styles.navTitle}>Working on it - 03/14/22</p>
-                <p className={styles.navTitle}>Express genius - 03/14/22</p>
-                <p className={styles.navTitle}>Next in line - 03/14/22</p>
-                <p className={styles.navTitle}>Tub-o-ware - 03/14/22</p>
+                <Link href="/blog/working-on-it">
+                  <p className={styles.navTitle}>Working on it - 03/14/22</p>
+                </Link>
               </div>
               <div className={styles.navTitles}>
                 <p className={styles.navTitleTITLE}>stuff</p>
-                <p className={styles.navTitle}>snowglobe</p>
-                <p className={styles.navTitle}>gravity</p>
+                <Link href="/stuff/snowglobe">
+                  <p className={styles.navTitle}>snowglobe</p>
+                </Link>
+                <Link href="/stuff/gravity">
+                  <p className={styles.navTitle}>gravity</p>
+                </Link>
               </div>
             </div>
           </div>
-          <iframe
-            className={styles.song}
-            src="https://open.spotify.com/embed/track/3fsnRK4dEe7NykXL5anAGp?utm_source=generator"
-            width="100%"
-            height="80"
-            frameBorder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          ></iframe>
+          <div className={styles.colorPicker}>
+            <div className={styles.colorButton}>
+              <button
+                className={styles.colorButton1}
+                onClick={() => {
+                  handleColor("red");
+                }}
+              ></button>
+            </div>
+            <div className={styles.colorButton}>
+              <button
+                className={styles.colorButton2}
+                onClick={() => {
+                  handleColor("red");
+                }}
+              ></button>
+            </div>
+            <div className={styles.colorButton}>
+              <button
+                className={styles.colorButton3}
+                onClick={() => {
+                  handleColor("red");
+                }}
+              ></button>
+            </div>
+            <div className={styles.colorButton}>
+              <button
+                className={styles.colorButton4}
+                onClick={() => {
+                  handleColor("red");
+                }}
+              ></button>
+            </div>
+          </div>
         </div>
         <div className={styles.mainDiv}>
           <div className={styles.mainNav}>

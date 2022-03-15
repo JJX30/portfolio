@@ -15,6 +15,7 @@
   background-color: #a6ff00;
   width: 20%;
   height: 100vh;
+  box-shadow: inset 0 0 1000px 0 rgb(0 0 0 / 30%);
 }
 
 .contentScroll {
@@ -70,6 +71,12 @@
 
 .navTitle:hover {
   font-family: "Courier Prime", monospace;
+  box-shadow: inset 0 0 1000px 0 rgb(0 0 0 / 30%);
+  cursor: pointer;
+}
+
+.navTitle {
+  font-size: 13px;
 }
 
 .song {
@@ -78,4 +85,52 @@
 
 .canvas {
   color: wheat;
+}
+
+.colorPicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+}
+
+.colorButton {
+  margin: 0px 17px 0px 17px;
+}
+.colorButton1 {
+  background-color: #ff0000;
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 30px;
+  height: 30px;
+}
+.colorButton2 {
+  background-color: #00d9ff;
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 30px;
+  height: 30px;
+}
+.colorButton3 {
+  background-color: #e100ff;
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 30px;
+  height: 30px;
+}
+.colorButton4 {
+  background-color: #a6ff00;
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 30px;
+  height: 30px;
 }
