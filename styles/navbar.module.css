@@ -37,6 +37,7 @@
 
 .navbar_content_hidden {
   margin: 10px;
+  text-align: right;
   font-size: 20px;
 }
 
@@ -44,15 +45,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 .navbar_hamburger_hidden {
   display: flex;
   flex-direction: column;
   position: fixed;
   visibility: hidden;
+  background-color: white;
+  color: black;
+  width: 200px;
+  right: 0px;
+  top: 101px;
 }
 
 .icon {
-  color: white;
   margin: 20px;
 }

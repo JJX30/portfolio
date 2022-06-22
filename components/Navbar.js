@@ -5,6 +5,15 @@ import { CgMenu } from "react-icons/cg";
 
 const Navbar = () => {
   const menu = useRef();
+  const background = useRef();
+  const iconBlack = {
+    color: "black",
+  };
+  const iconWhite = {
+    color: "white",
+  };
+
+  const [iconColor, setIconColor] = useState({ color: "white" });
   const [small, setSmall] = useState(false);
   const [width, setWidth] = useState(0); // default width, detect on server.
   useEffect(() => {
@@ -29,9 +38,13 @@ const Navbar = () => {
 
   const handleClick = () => {
     if (menu.current.style.visibility == "visible") {
+      background.current.style.backgroundColor = "black";
       menu.current.style.visibility = "hidden";
+      setIconColor({ color: "white" });
     } else {
+      background.current.style.backgroundColor = "white";
       menu.current.style.visibility = "visible";
+      setIconColor({ color: "black" });
     }
   };
 
@@ -45,8 +58,16 @@ const Navbar = () => {
             </div>
           </div>
           <div className={styles.navbar_right}>
-            <div onClick={handleClick} className={styles.navbar_hamburger}>
-              <CgMenu className={styles.icon} size={47}></CgMenu>
+            <div
+              onClick={handleClick}
+              ref={background}
+              className={styles.navbar_hamburger}
+            >
+              <CgMenu
+                style={iconColor}
+                className={styles.icon}
+                size={47}
+              ></CgMenu>
               <div ref={menu} className={styles.navbar_hamburger_hidden}>
                 <div className={styles.navbar_content_hidden}>
                   <Link href="/work">work</Link>
