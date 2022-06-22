@@ -1,17 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+
+import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
-import BsLightbulbOff from "react-icons/bs";
-import { useRef } from "react";
 
 function Home() {
-  const navVertical = useRef(null);
-
-  function handleColor(color) {
-    navVertical.current.backgroundColor = color;
-  }
-
   return (
     <div>
       <Head>
@@ -20,112 +12,9 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <div className={styles.navVertical} ref={navVertical}>
-          <div>
-            <p className={styles.titleText}>
-              <Link href="/">Mauricio Del Castillo</Link>
-            </p>
-            <div className={styles.contentScroll}>
-              <div className={styles.navTitles}>
-                <p className={styles.navTitleTITLE}>socials</p>
-                <a
-                  href="https://twitter.com/hedosntknow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  <p className={styles.navTitle}>twitter</p>
-                </a>
-                <a
-                  href="https://www.instagram.com/mdelcas4/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  <p className={styles.navTitle}>instagram</p>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mauricio-del-castillo-264611219/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  <p className={styles.navTitle}>linkedin</p>
-                </a>
-                <a
-                  href="https://github.com/JJX30"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  <p className={styles.navTitle}>github</p>
-                </a>
-              </div>
-              <div className={styles.navTitles}>
-                <p className={styles.navTitleTITLE}>blog</p>
-                <Link href="/blog/working-on-it">
-                  <p className={styles.navTitle}>Working on it - 03/14/22</p>
-                </Link>
-              </div>
-              <div className={styles.navTitles}>
-                <p className={styles.navTitleTITLE}>stuff</p>
-                <Link href="/stuff/snowglobe">
-                  <p className={styles.navTitle}>snowglobe</p>
-                </Link>
-                <Link href="/stuff/gravity">
-                  <p className={styles.navTitle}>gravity</p>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className={styles.colorPicker}>
-            <div className={styles.colorButton}>
-              <button
-                className={styles.colorButton1}
-                onClick={() => {
-                  handleColor("red");
-                }}
-              ></button>
-            </div>
-            <div className={styles.colorButton}>
-              <button
-                className={styles.colorButton2}
-                onClick={() => {
-                  handleColor("red");
-                }}
-              ></button>
-            </div>
-            <div className={styles.colorButton}>
-              <button
-                className={styles.colorButton3}
-                onClick={() => {
-                  handleColor("red");
-                }}
-              ></button>
-            </div>
-            <div className={styles.colorButton}>
-              <button
-                className={styles.colorButton4}
-                onClick={() => {
-                  handleColor("red");
-                }}
-              ></button>
-            </div>
-          </div>
-        </div>
         <div className={styles.mainDiv}>
-          <div className={styles.mainNav}>
-            <div className={styles.mainNavContent}>
-              <Link href="/work">work</Link>
-            </div>
-            <div className={styles.mainNavContent}>
-              <Link href="/work">about</Link>
-            </div>
-            <div className={styles.mainNavContent}>
-              <Link href="/work">contact</Link>
-            </div>
-          </div>
-          <div className={styles.canvas}>fsadf</div>
+          <Navbar></Navbar>
+          <div className={styles.canvas}></div>
         </div>
       </div>
     </div>

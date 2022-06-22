@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.navbar_left {
+  display: flex;
+}
+
+.navbar_right {
+  display: flex;
+  flex-direction: row;
+}
+.navbar_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  font-size: 15px;
+  /* font-family: "Courier Prime", monospace; */
+}
+
+.navbar_content {
+  margin: 30px;
+  font-size: 24px;
+}
