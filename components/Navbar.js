@@ -46,7 +46,32 @@ const Navbar = () => {
     };
   }, [width]);
 
+  const checkWidth = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    if (small) {
+      // add when mounted
+      document.addEventListener("mousedown", handleClickOutside);
+      // return function to be called when unmounted
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }
+  }, [small]);
+
   //Handle Functions
+
+  const handleClickOutside = (e) => {
+    if (menu.current.contains(e.target)) {
+      menu.current.style.visibility = "visible";
+      return;
+    }
+    // outside click
+    menu.current.style.visibility = "hidden";
+  };
+
   const handleMove = async (key) => {
     if (key == "work") {
       for (let i = 0; i < 20; i++) {
@@ -89,10 +114,6 @@ const Navbar = () => {
     } else if (key == "contact") {
       setContactText(key);
     }
-  };
-
-  const checkWidth = () => {
-    setWidth(window.innerWidth);
   };
 
   const handleClick = () => {
