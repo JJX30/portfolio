@@ -1,9 +1,38 @@
 import Head from "next/head";
-
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 
 function Work() {
+  const randCharacters =
+    "~!@#$%^&*()_+1234567890-=][poiuytrewqasdfghjkl{}?/><mnbvcxz";
+  const [text, setText] = useState("bruh");
+
+  const randomString = (length) => {
+    let temp = "";
+    for (let i = 0; i < length; i++) {
+      temp = temp + randCharacters.charAt(Math.floor(Math.random() * 59));
+    }
+    return temp;
+  };
+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  const handleMove = async () => {
+    for (let i = 0; i < 20; i++) {
+      setText((prev) => {
+        return randomString(prev.length);
+      });
+      await wait(2);
+      if (i == 19) {
+        setText("bruh");
+      }
+    }
+  };
+
+  const handleLeave = () => {
+    setText("bruh");
+  };
+
   return (
     <div>
       <Head>
@@ -14,7 +43,17 @@ function Work() {
       <div className={styles.main}>
         <div className={styles.mainDiv}>
           <Navbar></Navbar>
-          <div className={styles.canvas}></div>
+          <div className={styles.text_container}>
+            <Link href="/work">
+              <p
+                onMouseMove={handleMove}
+                onMouseLeave={handleLeave}
+                className={styles.text}
+              >
+                {text}
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

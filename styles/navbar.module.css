@@ -33,6 +33,7 @@
 .navbar_content {
   margin: 30px;
   font-size: 24px;
+  cursor: pointer;
 }
 
 .navbar_content_hidden {
