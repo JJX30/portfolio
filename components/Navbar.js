@@ -28,6 +28,7 @@ const Navbar = () => {
   const [workText, setWorkText] = useState("work");
   const [aboutText, setAboutText] = useState("about");
   const [contactText, setContactText] = useState("contact");
+  const [isMousedOver, setIsMousedOver] = useState(false);
 
   // useEffects
   useEffect(() => {
@@ -125,7 +126,13 @@ const Navbar = () => {
     }
   };
 
-  const handleMouseOver = () => {};
+  const handleMouseEnter = () => {
+    setIsMousedOver(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMousedOver(false);
+  };
   return (
     <div>
       {small ? (
@@ -173,14 +180,23 @@ const Navbar = () => {
       ) : (
         <div className={styles.navbar}>
           <div className={styles.navbar_left}>
-            <div onMouseOver={handleMouseOver} className={styles.navbar_title}>
-              <Link href="/">Mauricio Del Castillo</Link>
-              <Image
-                src="/portfolio_black.png"
-                alt="logo"
-                width={50}
-                height={20}
-              ></Image>
+            <div
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              className={styles.navbar_title}
+            >
+              {isMousedOver ? (
+                <Link href="/">
+                  <Image
+                    src="/portfolio_large.png"
+                    alt="logo"
+                    width={190}
+                    height={15}
+                  ></Image>
+                </Link>
+              ) : (
+                <Link href="/">Mauricio Del Castillo</Link>
+              )}
             </div>
           </div>
           <div className={styles.navbar_right}>
