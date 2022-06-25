@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/navbar.module.css";
 import React, { useState, useEffect, useRef } from "react";
 import { CgMenu } from "react-icons/cg";
@@ -124,6 +125,7 @@ const Navbar = () => {
     }
   };
 
+  const handleMouseOver = () => {};
   return (
     <div>
       {small ? (
@@ -171,8 +173,14 @@ const Navbar = () => {
       ) : (
         <div className={styles.navbar}>
           <div className={styles.navbar_left}>
-            <div className={styles.navbar_title}>
+            <div onMouseOver={handleMouseOver} className={styles.navbar_title}>
               <Link href="/">Mauricio Del Castillo</Link>
+              <Image
+                src="/portfolio_black.png"
+                alt="logo"
+                width={50}
+                height={20}
+              ></Image>
             </div>
           </div>
           <div className={styles.navbar_right}>
