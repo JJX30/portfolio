@@ -18,6 +18,7 @@
   align-items: center;
   margin: 25px;
   font-size: 15px;
+  cursor: pointer;
   /* font-family: "Courier Prime", monospace; */
 }
 .navbar_title_small {

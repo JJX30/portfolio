@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
+import profilePic from "../public/zombectro.jpeg";
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Work.module.css";
 
 function Work() {
   const randCharacters =
@@ -43,8 +45,40 @@ function Work() {
       <div className={styles.main}>
         <div className={styles.mainDiv}>
           <Navbar></Navbar>
-          <div className={styles.text_container}>
-            <Link href="/work">
+          <div className={styles.project_div}>
+            <div className={styles.project_container}>
+              <Image
+                src={profilePic}
+                alt="Picture of the author"
+                className={styles.project_image}
+              />
+              <div className={styles.project_content}>
+                <h1>project 1</h1>
+                <p>this is project 1 it is really cool blah blah </p>
+              </div>
+            </div>
+            <div className={styles.project_container}>
+              <div className={styles.project_image}></div>
+              <div className={styles.project_content}>
+                <h1>project 1</h1>
+                <p>this is project 1 it is really cool blah blah </p>
+              </div>
+            </div>
+            <div className={styles.project_container}>
+              <div className={styles.project_image}></div>
+              <div className={styles.project_content}>
+                <h1>project 1</h1>
+                <p>this is project 1 it is really cool blah blah </p>
+              </div>
+            </div>
+            <div className={styles.project_container}>
+              <div className={styles.project_image}></div>
+              <div className={styles.project_content}>
+                <h1>project 1</h1>
+                <p>this is project 1 it is really cool blah blah </p>
+              </div>
+            </div>
+            {/* <Link href="/work">
               <p
                 onMouseMove={handleMove}
                 onMouseLeave={handleLeave}
@@ -52,7 +86,7 @@ function Work() {
               >
                 {text}
               </p>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

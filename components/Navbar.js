@@ -29,6 +29,7 @@ const Navbar = () => {
   const [aboutText, setAboutText] = useState("about");
   const [contactText, setContactText] = useState("contact");
   const [isMousedOver, setIsMousedOver] = useState(false);
+  const [subscribed, setSubscribed] = useState(false);
 
   // useEffects
   useEffect(() => {
@@ -73,7 +74,6 @@ const Navbar = () => {
     // outside click
     menu.current.style.visibility = "hidden";
   };
-
   const handleMove = async (key) => {
     if (key == "work") {
       for (let i = 0; i < 20; i++) {
@@ -82,7 +82,9 @@ const Navbar = () => {
         });
         await wait(2);
         if (i == 19) {
-          setWorkText(key);
+          setWorkText(() => {
+            return key;
+          });
         }
       }
     } else if (key == "about") {
@@ -133,6 +135,7 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     setIsMousedOver(false);
   };
+
   return (
     <div>
       {small ? (
@@ -178,6 +181,7 @@ const Navbar = () => {
           </div>
         </div>
       ) : (
+        // BIG
         <div className={styles.navbar}>
           <div className={styles.navbar_left}>
             <div
@@ -185,18 +189,18 @@ const Navbar = () => {
               onMouseLeave={handleMouseLeave}
               className={styles.navbar_title}
             >
-              {isMousedOver ? (
+              {/* {isMousedOver ? (
                 <Link href="/">
                   <Image
                     src="/portfolio_large.png"
                     alt="logo"
                     width={190}
-                    height={15}
+                    height={30}
                   ></Image>
                 </Link>
-              ) : (
-                <Link href="/">Mauricio Del Castillo</Link>
-              )}
+              ) : ( */}
+              <Link href="/">Mauricio Del Castillo</Link>
+              {/* )} */}
             </div>
           </div>
           <div className={styles.navbar_right}>
