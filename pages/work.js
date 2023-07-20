@@ -1,40 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import profilePic from "../public/zombectro.jpeg";
+import logo from "../public/logo.png";
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Work.module.css";
 
 function Work() {
-  const randCharacters =
-    "~!@#$%^&*()_+1234567890-=][poiuytrewqasdfghjkl{}?/><mnbvcxz";
-  const [text, setText] = useState("bruh");
-
-  const randomString = (length) => {
-    let temp = "";
-    for (let i = 0; i < length; i++) {
-      temp = temp + randCharacters.charAt(Math.floor(Math.random() * 59));
-    }
-    return temp;
-  };
-  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  const handleMove = async () => {
-    for (let i = 0; i < 20; i++) {
-      setText((prev) => {
-        return randomString(prev.length);
-      });
-      await wait(2);
-      if (i == 19) {
-        setText("bruh");
-      }
-    }
-  };
-
-  const handleLeave = () => {
-    setText("bruh");
-  };
-
   return (
     <div>
       <Head>
@@ -48,34 +20,125 @@ function Work() {
           <div className={styles.project_div}>
             <div className={styles.project_container}>
               <Image
-                src={profilePic}
-                alt="Picture of the author"
+                src={logo}
+                width="700px"
+                objectFit="cover"
+                alt="UltimateAPI"
                 className={styles.project_image}
               />
               <div className={styles.project_content}>
-                <h1>project 1</h1>
-                <p>this is project 1 it is really cool blah blah </p>
+                <h1 className={styles.project_content_header}>UltimateAPI</h1>
+                <p className={styles.project_content_p}>
+                  RESTful API/MERN app which offers access to comprehensive
+                  information on UFC fighters. Head to{" "}
+                  <a
+                    className={styles.project_content_link}
+                    href="ultimateapi.tech"
+                  >
+                    UltimateAPI.tech
+                  </a>
+                  , create an account, and receive your unique API key.
+                  <br />
+                  <br />
+                  <a
+                    href="https://github.com/JJX30/UltimateAPI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.project_content_link}
+                  >
+                    Repo (for test account)
+                  </a>
+                </p>
               </div>
             </div>
             <div className={styles.project_container}>
-              <div className={styles.project_image}></div>
+              <Image
+                src={logo}
+                width="800px"
+                objectFit="cover"
+                alt="FGLPsite"
+                className={styles.project_image}
+              />
               <div className={styles.project_content}>
-                <h1>project 1</h1>
-                <p>this is project 1 it is really cool blah blah </p>
+                <h1 className={styles.project_content_header}>FGLP site</h1>
+                <p className={styles.project_content_p}>
+                  Official site for the First-Generation Leadership Program, web
+                  responsive dynamic site that helps engage with first-gen
+                  students and members interested in learning more and applying.
+                  <br />
+                  <br />
+                  <a className={styles.project_content_link} href="fglpuf.com">
+                    Link to site
+                  </a>
+                </p>
               </div>
             </div>
             <div className={styles.project_container}>
-              <div className={styles.project_image}></div>
+              <Image
+                src={logo}
+                width="700px"
+                objectFit="cover"
+                alt="UltimateAPI"
+                className={styles.project_image}
+              />
               <div className={styles.project_content}>
-                <h1>project 1</h1>
-                <p>this is project 1 it is really cool blah blah </p>
+                <h1 className={styles.project_content_header}>ZooCLI</h1>
+                <p className={styles.project_content_p}>
+                  ZooCLI is a npm package dex-game aiming to teach about animals
+                  while showing amazing ASCII art. Give it a whirl it's pretty
+                  cute!
+                  <br />
+                  <br />
+                  <a
+                    href="https://github.com/JJX30/UltimateAPI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.project_content_link}
+                  >
+                    Repo
+                  </a>
+                  <br />
+                  <br />
+                  <a
+                    className={styles.project_content_link}
+                    href="ultimateapi.tech"
+                  >
+                    Package
+                  </a>
+                </p>
               </div>
             </div>
             <div className={styles.project_container}>
-              <div className={styles.project_image}></div>
+              <Image
+                src={logo}
+                width="700px"
+                objectFit="cover"
+                alt="UltimateAPI"
+                className={styles.project_image}
+              />
               <div className={styles.project_content}>
-                <h1>project 1</h1>
-                <p>this is project 1 it is really cool blah blah </p>
+                <h1 className={styles.project_content_header}>is-rec-full</h1>
+                <p className={styles.project_content_p}>
+                  A gym capacity meter for UF gyms. Using Node, Python CV2, and
+                  the schools api to answer the age old quesion{" "}
+                  <a
+                    href="https://github.com/JJX30/UltimateAPI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.project_content_link}
+                  >
+                    is-rec-full
+                  </a>
+                  ?
+                  <br />
+                  <br />
+                  <a
+                    className={styles.project_content_link}
+                    href="ultimateapi.tech"
+                  >
+                    Repo
+                  </a>
+                </p>
               </div>
             </div>
             {/* <Link href="/work">
