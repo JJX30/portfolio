@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../public/logo.png";
+import fglp from "../public/fglp.jpeg";
+import ufc from "../public/octo.jpeg";
+import recful from "../public/southwest.jpeg";
+import zoocli from "../public/zoocli.png";
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Work.module.css";
@@ -20,8 +23,8 @@ function Work() {
           <div className={styles.project_div}>
             <div className={styles.project_container}>
               <Image
-                src={logo}
-                width="700px"
+                src={ufc}
+                width="900px"
                 objectFit="cover"
                 alt="UltimateAPI"
                 className={styles.project_image}
@@ -38,8 +41,8 @@ function Work() {
                     UltimateAPI.tech
                   </a>
                   , create an account, and receive your unique API key.
-                  <br />
-                  <br />
+                </p>
+                <p className={styles.project_content_p}>
                   <a
                     href="https://github.com/JJX30/UltimateAPI"
                     target="_blank"
@@ -53,8 +56,8 @@ function Work() {
             </div>
             <div className={styles.project_container}>
               <Image
-                src={logo}
-                width="800px"
+                src={fglp}
+                width="950px"
                 objectFit="cover"
                 alt="FGLPsite"
                 className={styles.project_image}
@@ -65,8 +68,8 @@ function Work() {
                   Official site for the First-Generation Leadership Program, web
                   responsive dynamic site that helps engage with first-gen
                   students and members interested in learning more and applying.
-                  <br />
-                  <br />
+                </p>
+                <p className={styles.project_content_p}>
                   <a className={styles.project_content_link} href="fglpuf.com">
                     Link to site
                   </a>
@@ -75,7 +78,7 @@ function Work() {
             </div>
             <div className={styles.project_container}>
               <Image
-                src={logo}
+                src={zoocli}
                 width="700px"
                 objectFit="cover"
                 alt="UltimateAPI"
@@ -87,8 +90,8 @@ function Work() {
                   ZooCLI is a npm package dex-game aiming to teach about animals
                   while showing amazing ASCII art. Give it a whirl it's pretty
                   cute!
-                  <br />
-                  <br />
+                </p>
+                <p className={styles.project_content_p}>
                   <a
                     href="https://github.com/JJX30/UltimateAPI"
                     target="_blank"
@@ -97,8 +100,8 @@ function Work() {
                   >
                     Repo
                   </a>
-                  <br />
-                  <br />
+                </p>
+                <p className={styles.project_content_p}>
                   <a
                     className={styles.project_content_link}
                     href="ultimateapi.tech"
@@ -110,9 +113,10 @@ function Work() {
             </div>
             <div className={styles.project_container}>
               <Image
-                src={logo}
+                src={recful}
                 width="700px"
                 objectFit="cover"
+                objectPosition="-160px 0px"
                 alt="UltimateAPI"
                 className={styles.project_image}
               />
@@ -130,8 +134,9 @@ function Work() {
                     is-rec-full
                   </a>
                   ?
-                  <br />
-                  <br />
+                </p>
+
+                <p className={styles.project_content_p}>
                   <a
                     className={styles.project_content_link}
                     href="ultimateapi.tech"
