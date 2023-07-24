@@ -24,7 +24,7 @@ function Work() {
             <div className={styles.project_container}>
               <Image
                 src={ufc}
-                width="900px"
+                width={500}
                 objectFit="cover"
                 alt="UltimateAPI"
                 className={styles.project_image}
@@ -57,7 +57,7 @@ function Work() {
             <div className={styles.project_container}>
               <Image
                 src={fglp}
-                width="950px"
+                width={536.15}
                 objectFit="cover"
                 alt="FGLPsite"
                 className={styles.project_image}
@@ -79,7 +79,7 @@ function Work() {
             <div className={styles.project_container}>
               <Image
                 src={zoocli}
-                width="700px"
+                width={379.72}
                 objectFit="cover"
                 alt="UltimateAPI"
                 className={styles.project_image}
@@ -99,13 +99,12 @@ function Work() {
                     className={styles.project_content_link}
                   >
                     Repo
-                  </a>
-                </p>
-                <p className={styles.project_content_p}>
+                  </a>{" "}
                   <a
                     className={styles.project_content_link}
                     href="ultimateapi.tech"
                   >
+                    {" "}
                     Package
                   </a>
                 </p>
@@ -114,9 +113,8 @@ function Work() {
             <div className={styles.project_container}>
               <Image
                 src={recful}
-                width="700px"
+                width={364.53}
                 objectFit="cover"
-                objectPosition="-160px 0px"
                 alt="UltimateAPI"
                 className={styles.project_image}
               />

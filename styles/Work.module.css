@@ -1,29 +1,29 @@
 .project_div {
   color: white;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .project_container {
   display: flex;
-  width: 40%;
-  height: 300px;
-  margin: 20px;
+  width: 80%;
+  height: 230px;
+  margin: 10px;
   border-style: solid;
   border-color: rgb(255, 255, 255);
   border-radius: 5px;
 }
 
 .project_container:hover {
-  transform: scale(1.02);
+  transform: scale(1.009);
   transition-duration: 0.2s;
 }
 
 .project_content {
   margin: 30px;
-  /* font-family: "Inter", sans-serif; */
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Inter", sans-serif;
+  /* font-family: "Courier New", Courier, monospace; */
 }
 
 .project_content_header {

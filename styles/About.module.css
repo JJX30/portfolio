@@ -7,6 +7,11 @@
   border-radius: 20px;
   margin: 30px;
 }
+
+.profile_card:hover {
+  transform: scale(1.02);
+  transition-duration: 0.2s;
+}
 .resume_edu_card {
   font-family: "Inter", sans-serif;
   display: flex;
@@ -17,6 +22,11 @@
   margin: 30px;
   color: white;
   padding: 30px;
+}
+
+.resume_edu_card:hover {
+  transform: scale(1.02);
+  transition-duration: 0.2s;
 }
 .button_div {
   display: flex;
