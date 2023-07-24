@@ -22,7 +22,8 @@
 
 .project_content {
   margin: 30px;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
+  font-family: "Courier New", Courier, monospace;
 }
 
 .project_content_header {
@@ -37,4 +38,7 @@
   color: blue;
   font-weight: 700;
   text-decoration: underline;
+}
+.project_content_link:hover {
+  color: rgb(166, 0, 255);
 }

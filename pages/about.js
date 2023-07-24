@@ -1,7 +1,9 @@
 import Head from "next/head";
-
+import Image from "next/image";
+import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
+import profilePic from "../public/profile.JPG";
 import Navbar from "../components/Navbar";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/About.module.css";
 
 function About() {
   return (
@@ -14,7 +16,67 @@ function About() {
       <div className={styles.main}>
         <div className={styles.mainDiv}>
           <Navbar></Navbar>
-          <div className={styles.canvas}></div>
+          <div className={styles.profile_card}>
+            <div className={styles.profile_card_pic_div}>
+              <div className={styles.profile_card_pic_div_div}>
+                <Image
+                  objectFit="cover"
+                  src={profilePic}
+                  className={styles.profile_card_pic}
+                />
+              </div>
+              <div className={styles.profile_card_pic_about}>
+                <h1 className={styles.profile_card_pic_about_h1}>
+                  Mauricio Del Castillo
+                </h1>
+                <p className={styles.profile_card_pic_about_p}>
+                  Computer Science @ UF | Machen Florida Opportunity Scholar
+                </p>
+              </div>
+            </div>
+            <div className={styles.profile_card_about}>
+              <h1 className={styles.profile_card_about_h1}>
+                Yoo, I'm Mauricio! (he/him) 👋
+              </h1>
+              <p className={styles.profile_card_about_p}>
+                I'm a <b>full-stack programmer</b> from <b>Miami</b> 🌴 who's
+                currently studying at the <b>University of Florida</b> 🐊 <br />
+                <br /> Below you will find my <b>qualifications</b> and{" "}
+                <b>experiences</b>. Feel free to contact me using the{" "}
+                <b>contact tab</b> if you like what you see! <br /> <br /> I
+                also do <b>freelance</b> so checkout my projects if you'd like
+                to see what I'm capable of.
+                <br />
+                <br />
+                <div className={styles.icon_div}>
+                  <a
+                    href="https://github.com/JJX30/UltimateAPI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.project_content_link}
+                  >
+                    <AiFillLinkedin size={40}></AiFillLinkedin>
+                  </a>
+                  <a
+                    href="https://github.com/JJX30/UltimateAPI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.project_content_link}
+                  >
+                    <AiFillInstagram size={40}></AiFillInstagram>
+                  </a>
+                  <a
+                    href="https://github.com/JJX30/UltimateAPI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.project_content_link}
+                  >
+                    <AiFillGithub size={40}></AiFillGithub>
+                  </a>
+                </div>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
