@@ -7,6 +7,105 @@
   border-radius: 20px;
   margin: 30px;
 }
+.resume_edu_card {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+  margin: 30px;
+  color: white;
+  padding: 30px;
+}
+.button_div {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 50px 0px;
+  color: white;
+}
+.button {
+  color: white;
+  width: 20%;
+  height: 50px;
+  border-radius: 50px;
+  border-style: none;
+  background-color: white;
+  font-family: "Courier New", Courier, monospace;
+  border-style: solid;
+  border-color: white;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(50%, #000000),
+    color-stop(50%, #ffffff)
+  );
+  background: -webkit-linear-gradient(left, #000000 50%, #ffffff 50%);
+  background: -moz-linear-gradient(left, #000000 50%, #ffffff 50%);
+  background: linear-gradient(to right, #000000 50%, #ffffff 50%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  -webkit-transition: background-position 0.3s ease-out;
+  -moz-transition: background-position 0.3s ease-out;
+  transition: background-position 0.3s ease-out;
+}
+.button:hover {
+  background-position: -100% 0;
+  color: black;
+  cursor: pointer;
+}
+.resume_edu_header_main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.resume_edu_header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+/* .resume_edu_header_2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+} */
+.resume_edu_header_h1 {
+  font-size: 40px;
+  margin: 0px;
+}
+.resume_edu_header_h2 {
+  font-size: 27px;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+}
+.resume_edu_header_h2_2 {
+  font-size: 23px;
+  font-weight: lighter;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0px;
+}
+.resume_edu_body {
+  margin: 10px 0px 0px 0px;
+  font-weight: 100;
+  font-size: 20px;
+}
+.resume_edu_header_date {
+  font-size: 23px;
+  font-weight: 100;
+  margin: 0px;
+}
+.resume_edu_header_date_2 {
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0px;
+}
 .profile_card_pic_div {
   display: flex;
   flex-direction: column;
@@ -56,8 +155,7 @@
   height: 1px;
   background-color: white;
 }
-.icon_div {
-}
+
 .project_content_link {
   margin-right: 20px;
 }

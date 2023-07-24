@@ -6,6 +6,14 @@ import Navbar from "../components/Navbar";
 import styles from "../styles/About.module.css";
 
 function About() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
   return (
     <div>
       <Head>
@@ -76,6 +84,210 @@ function About() {
                 </div>
               </p>
             </div>
+          </div>
+          <div className={styles.resume_edu_card}>
+            <h1 className={styles.resume_edu_header_h1}>Education</h1>
+            <div className={styles.profile_card_about_divider}></div>
+            <div className={styles.resume_edu_header_main}>
+              <p className={styles.resume_edu_header_h2}>
+                The University of Florida
+              </p>
+              <p className={styles.resume_edu_header_date}>Gainesville, FL</p>
+            </div>
+            <div className={styles.resume_edu_header}>
+              <p className={styles.resume_edu_header_h2_2}>
+                Bachelor of Science in Computer Science
+              </p>
+              <p className={styles.resume_edu_header_date_2}>May 2025</p>
+            </div>
+            <div className={styles.resume_edu_body}>
+              <li className={styles.resume_edu_body_li}>
+                Machen Florida Opportunity Scholarship Scholar
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Coursework includes: Data Structures and Algorithms | Computer
+                Organization | Programming Fundamentals I & II | Discrete
+                Structures | Analytic Geometry and Calculus III | and other
+                courses pertaining to sciences and humanities
+              </li>
+            </div>
+            <div className={styles.resume_edu_header_main}>
+              <p className={styles.resume_edu_header_h2}>
+                Terra Environmental Research Institute
+              </p>
+              <p className={styles.resume_edu_header_date}>Miami, FL</p>
+            </div>
+            <div className={styles.resume_edu_header}>
+              <p className={styles.resume_edu_header_h2_2}>
+                Engineering Magnet
+              </p>
+              <p className={styles.resume_edu_header_date_2}>June 2020</p>
+            </div>
+            <div className={styles.resume_edu_body}>
+              <li className={styles.resume_edu_body_li}>Magna Cum Laude</li>
+              <li className={styles.resume_edu_body_li}>
+                Percentile Rank: 97%
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Coursework includes: AP Calculus AB & BC | AP Physics: Mechanics
+                | AP Computer Science A | and other courses pertaining to
+                sciences and humanities
+              </li>
+            </div>
+          </div>
+          <div className={styles.resume_edu_card}>
+            <h1 className={styles.resume_edu_header_h1}>
+              Skills and Certifications
+            </h1>
+            <div className={styles.profile_card_about_divider}></div>
+
+            <div className={styles.resume_edu_body}>
+              <li className={styles.resume_edu_body_li}>
+                Technical Skills: C++, Python, Java, HTML/CSS/JS, NodeJS,
+                Express, React, Next.js, MongoDB, Git
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Bilingual fluency in Spanish
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Interests: Economics, Fintech, UI/UX, and MMA
+              </li>
+            </div>
+          </div>
+          <div className={styles.resume_edu_card}>
+            <h1 className={styles.resume_edu_header_h1}>Work Experience</h1>
+            <div className={styles.profile_card_about_divider}></div>
+            <div className={styles.resume_edu_header_main}>
+              <p className={styles.resume_edu_header_h2}>BeeTechyLLC</p>
+              <p className={styles.resume_edu_header_date}>Remote</p>
+            </div>
+            <div className={styles.resume_edu_header}>
+              <p className={styles.resume_edu_header_h2_2}>
+                Web development internship
+              </p>
+              <p className={styles.resume_edu_header_date_2}>
+                February 2021 - June 2021
+              </p>
+            </div>
+            <div className={styles.resume_edu_body}>
+              <li className={styles.resume_edu_body_li}>
+                Created a web app that sent tracked emails with NodeJS and
+                Express which facilitated communication for over 30 clients
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Designed and collaborated on a dashboard web app for employees
+                to track their hours, lines written, clock-ins, break times, and
+                other statistics
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Worked with a group of senior developers to learn the latest
+                front-end and back-end frameworks (React, Angular 16, NodeJS,
+                Express)
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Collaborated with group of 3 senior developers gaining
+                understanding of the software development process (SDLC, Unit
+                testing, CI/CD)
+              </li>
+            </div>
+            <div className={styles.resume_edu_header_main}>
+              <p className={styles.resume_edu_header_h2}>HoneyCrisp</p>
+              <p className={styles.resume_edu_header_date}>Remote</p>
+            </div>
+            <div className={styles.resume_edu_header}>
+              <p className={styles.resume_edu_header_h2_2}>IT Internship</p>
+              <p className={styles.resume_edu_header_date_2}>
+                August 2021 - December 2021
+              </p>
+            </div>
+            <div className={styles.resume_edu_body}>
+              <li className={styles.resume_edu_body_li}>
+                Engineered creative solutions and reorganized large sets of data
+                for clients using google app scripts and python
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Managed a list of over 50 clients and worked directly with them
+                to fix technical issues with their hardware or software
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Collaborated with a mentor and expedited the development of a
+                Customer Relationship Management app for a large client, helping
+                them manage their clients through tech solutions
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Studied the role of the business analyst and their importance in
+                the software development process through testing and expediting
+                development
+              </li>
+            </div>
+          </div>
+          <div className={styles.resume_edu_card}>
+            <h1 className={styles.resume_edu_header_h1}>
+              Projects / Extracurriculars
+            </h1>
+            <div className={styles.profile_card_about_divider}></div>
+            <div className={styles.resume_edu_header_main}>
+              <p className={styles.resume_edu_header_h2}>UltimateAPI</p>
+              <p className={styles.resume_edu_header_date}>MERN web app</p>
+            </div>
+            <div className={styles.resume_edu_header}>
+              <p className={styles.resume_edu_header_h2_2}>
+                API for UFC fighters and stats
+              </p>
+              <p className={styles.resume_edu_header_date_2}>
+                August 2021 - September 2021
+              </p>
+            </div>
+            <div className={styles.resume_edu_body}>
+              <li className={styles.resume_edu_body_li}>
+                Developed a REST API using NodeJS and Express with routes to
+                specific fighter data, facilitating access to statistics for
+                developers interested in MMA
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Created React front-end with account creation, authentication,
+                and authorization to distribute unique API keys to users
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Scrapped, parsed, and formatted fighter data into desired JSON
+                format using NodeJS stored in a MongoDB cluster
+              </li>
+            </div>
+            <div className={styles.resume_edu_header_main}>
+              <p className={styles.resume_edu_header_h2}>
+                First Generation Leadership Program
+              </p>
+              <p className={styles.resume_edu_header_date}>Gainesville, FL</p>
+            </div>
+            <div className={styles.resume_edu_header}>
+              <p className={styles.resume_edu_header_h2_2}>Website Director</p>
+              <p className={styles.resume_edu_header_date_2}>
+                January 2022 - Present
+              </p>
+            </div>
+            <div className={styles.resume_edu_body}>
+              <li className={styles.resume_edu_body_li}>
+                Built and managed website providing ease of access to
+                information for over 50 members, using skill learned from work
+                experience to provide tech solutions
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Graduated from a select cohort of 40 freshmen and attended
+                bi-weekly workshops that fostered professional development
+                skills and gained insight from first-generation leaders on
+                campus
+              </li>
+              <li className={styles.resume_edu_body_li}>
+                Pioneered a new position on the executive board to best use my
+                skills in programming and my passion for helping
+                first-generation students
+              </li>
+            </div>
+          </div>
+          <div className={styles.button_div}>
+            <button onClick={scrollToTop} className={styles.button}>
+              Back to the top
+            </button>
           </div>
         </div>
       </div>
