@@ -1,11 +1,16 @@
+.profile_main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .profile_card {
   font-family: "Inter", sans-serif;
   display: flex;
-  flex-direction: row;
   border-style: solid;
   border-color: white;
   border-radius: 20px;
   margin: 30px;
+  width: 80%;
 }
 
 .profile_card:hover {
@@ -22,6 +27,7 @@
   margin: 30px;
   color: white;
   padding: 30px;
+  width: 80%;
 }
 
 .resume_edu_card:hover {
@@ -108,12 +114,10 @@
 }
 .resume_edu_header_date {
   font-size: 23px;
-  font-weight: 100;
   margin: 0px;
 }
 .resume_edu_header_date_2 {
   font-size: 20px;
-  font-weight: 100;
   margin: 0px;
 }
 .profile_card_pic_div {
