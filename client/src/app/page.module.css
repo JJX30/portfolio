@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .home_div {
   width: 100%;
@@ -27,5 +28,7 @@
   display: grid;
   place-items: center;
   height: 100vh;
+  width: 100vw;
   cursor: grabbing;
+  position: fixed;
 }

@@ -3,13 +3,20 @@ import Navbar from "@/components/Navbar";
 import Post from "@/components/Post";
 import styles from "./page.module.css";
 import { Canvas } from "@react-three/fiber";
-import { useGLTF, Environment } from "@react-three/drei";
+import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 
 const Model = () => {
-  const gltf = useGLTF("./head.gltf");
+  const gltf = useGLTF("./head3.glb");
   return (
     <>
-      <primitive object={gltf.scene} scale={0.01} />
+      <OrbitControls enableZoom={false} />
+      <primitive
+        object={gltf.scene}
+        scale={0.5}
+        position-y={0.5}
+        position-x={0}
+        position-z={0}
+      />
     </>
   );
 };
