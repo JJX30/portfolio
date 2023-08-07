@@ -37,16 +37,22 @@ export default function Post(props) {
   return (
     <>
       <div className={styles.blog_div}>
-        <h1 className={styles.blog_title}>{props.title}</h1>
-        <p className={styles.blog_date}>{props.date}</p>
-        <p className={styles.blog_body}>{props.body}</p>
+        <h1 className={styles.blog_title}>
+          <span className={styles.blog_highlight}>{props.title}</span>
+        </h1>
+        <p className={styles.blog_date}>
+          <span className={styles.blog_highlight}>{props.date}</span>
+        </p>
+        <p className={styles.blog_body}>
+          <span className={styles.blog_highlight}>{props.body}</span>
+        </p>
         <Link
           onMouseMove={() => handleMove("Read more")}
           onMouseLeave={() => handleLeave("Read more")}
           href="/blog"
           className={styles.blog_more}
         >
-          {readmoreText}
+          <span className={styles.blog_highlight}>{readmoreText}</span>
         </Link>
       </div>
     </>
