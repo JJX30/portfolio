@@ -1,0 +1,26 @@
+.blog_div {
+  font-family: "Roboto Mono", monospace;
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+.blog_title {
+  font-weight: 300;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+.blog_date {
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 70%;
+  font-size: 16px;
+}
+
+.blog_body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+}
+.blog_more {
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 136, 255);
+}

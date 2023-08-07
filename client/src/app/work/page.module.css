@@ -1,0 +1,11 @@
+.text {
+  color: white;
+}
+
+.text:hover {
+  cursor: pointer;
+}
+
+.blog_title {
+  font-family: "Roboto Mono", monospace;
+}
