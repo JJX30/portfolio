@@ -1,15 +1,20 @@
 "use client";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Post from "@/components/Post";
 import styles from "./page.module.css";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
+import {
+  OrbitControls,
+  useGLTF,
+  Environment,
+  LightProps,
+} from "@react-three/drei";
 
 const Model = () => {
   const gltf = useGLTF("./head3.glb");
   return (
     <>
-      <OrbitControls enableZoom={false} />
       <primitive
         object={gltf.scene}
         scale={0.5}
@@ -48,12 +53,12 @@ export default function Page() {
       <Navbar></Navbar>
       <div className={styles.canvas_div}>
         <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 4], fov: 50 }}>
+          <pointLight position={[0, 0, 1.5]} intensity={1}></pointLight>
           <Model />
-          <Environment preset="city" />
         </Canvas>
       </div>
       <div className={styles.home_div}>
-        <h1 className={styles.home_title}>{headers[0]}</h1>
+        <h1 className={styles.home_title}>{"<Blog />"}</h1>
       </div>
       <div className={styles.home_main}>
         <Post
@@ -78,6 +83,7 @@ export default function Page() {
           }
         />
       </div>
+      <Footer isHome={true}></Footer>
     </>
   );
 }

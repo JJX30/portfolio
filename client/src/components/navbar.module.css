@@ -20,6 +20,7 @@
   align-items: center;
   margin: 25px;
   font-size: 15px;
+  font-weight: 300;
   cursor: pointer;
 }
 .navbar_title_small {
@@ -27,14 +28,16 @@
   align-items: center;
   justify-content: center;
   margin: 25px;
-  font-size: 15px;
+  font-size: 16px;
   text-align: left;
   width: 40%;
+  font-weight: 300;
 }
 
 .navbar_content {
   margin: 30px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -42,7 +45,8 @@
   color: white;
   padding: 10px;
   text-align: right;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 300;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -102,6 +106,7 @@
   display: flex;
   flex-direction: column;
   position: fixed;
+  z-index: 10;
   visibility: hidden;
   color: black;
   width: 150px;
