@@ -4,12 +4,7 @@ import Footer from "@/components/Footer";
 import Post from "@/components/Post";
 import styles from "./page.module.css";
 import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  useGLTF,
-  Environment,
-  LightProps,
-} from "@react-three/drei";
+import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 
 const Model = () => {
   const gltf = useGLTF("./head3.glb");
